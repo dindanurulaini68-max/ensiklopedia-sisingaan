@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ensiklopedia Sisingaan</title>
+  
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sceneEl = document.querySelector('a-scene');
+
+      // 1. Ambil target entity masing-masing halaman
+      const target0 = document.querySelector('#target0');
+      const target1 = document.querySelector('#target1');
+      const target2 = document.querySelector('#target2');
+      const target3 = document.querySelector('#target3');
+      const target4 = document.querySelector('#target4');
+      const target5 = document.querySelector('#target5');
+      const target6 = document.querySelector('#target6');
+      const target7 = document.querySelector('#target7');
+      const target8 = document.querySelector('#target8');
+      const target9 = document.querySelector('#target9');
+      const target10 = document.querySelector('#target10');
+      const target11 = document.querySelector('#target11');
+      const target12 = document.querySelector('#target12');
+      const target13 = document.querySelector('#target13');
+      const target14 = document.querySelector('#target14');
+      const target15 = document.querySelector('#target15');
+      const target16 = document.querySelector('#target16');
+      const target17 = document.querySelector('#target17');
+      const target18 = document.querySelector('#target18');
+      const target19 = document.querySelector('#target19');
+      const target20 = document.querySelector('#target20');
+      const target21 = document.querySelector('#target21');
+      const target22 = document.querySelector('#target22');
+      const target23 = document.querySelector('#target23');
+      const target24 = document.querySelector('#target24');
+      const target25 = document.querySelector('#target25');
+      const target26 = document.querySelector('#target26');
+      const target27 = document.querySelector('#target27');
+      const target28 = document.querySelector('#target28');
+      const target29 = document.querySelector('#target29');
+      const target30 = document.querySelector('#target30');
+      const target31 = document.querySelector('#target31');
+      const target32 = document.querySelector('#target32');
+      const target33 = document.querySelector('#target33');
+      const target34 = document.querySelector('#target34');
+      const target35 = document.querySelector('#target35');
+      const target36 = document.querySelector('#target36');
+      const target37 = document.querySelector('#target37');
+      const target38 = document.querySelector('#target38');
+      const target39 = document.querySelector('#target39');
+      const target40 = document.querySelector('#target40');
+      const target41 = document.querySelector('#target41');
+      const target42 = document.querySelector('#target42');
+      const target43 = document.querySelector('#target43');
+      const target44 = document.querySelector('#target44');
+      const target45 = document.querySelector('#target45');
+      const target46 = document.querySelector('#target46');
+      const target47 = document.querySelector('#target47');
+      const target48 = document.querySelector('#target48');
+      const target49 = document.querySelector('#target49');
+      const target50 = document.querySelector('#target50');
+      const target51 = document.querySelector('#target51');
+      const target52 = document.querySelector('#target52');
+      const target53 = document.querySelector('#target53');
+
+      // 2. Ambil audio & video masing-masing halaman
+      const audio19 = document.querySelector('#audio_halaman19');
+      const audio2 = document.querySelector('#audio_halaman2');
+      const audio15 = document.querySelector('#audio_halaman15');
+      const audio11 = document.querySelector('#audio_halaman11');
+      const video8 = document.querySelector('#videoModel8');
+      const audio54 = document.querySelector('#audio_filosofi');
+      const audio52 = document.querySelector('#audio_kol');
+      const audio51 = document.querySelector('#audio_horeg');
+      const audio46 = document.querySelector('#audio_kumpulan');
+      const audio45 = document.querySelector('#audio_alat');
+      const video43C = document.querySelector('#PenariMode43C');
+      const video43B = document.querySelector('#TariMode43B');
+      const video43A = document.querySelector('#HiburanMode43A');
+      const video42B = document.querySelector('#KETUKMode42B');
+      const video42A = document.querySelector('#IbingMode42A');
+      const audio39 = document.querySelector('#audio_tepak');
+      const audio40 = document.querySelector('#audio_tepak3');
+      const audio37 = document.querySelector('#audio_mincid');
+      const audio38 = document.querySelector('#audio_jalan');
+      const audio35 = document.querySelector('#audio_ewag');
+      const audio34 = document.querySelector('#audio_galura');
+      const audio33 = document.querySelector('#audio_ngedeprak');
+      const audio31 = document.querySelector('#audio_penutup');
+      const audio28 = document.querySelector('#audio_bubuka28');
+      const audio29 = document.querySelector('#audio_atraksi');
+      const audio27B = document.querySelector('#audio_bubuka27B');
+      const audio27A = document.querySelector('#audio_bubuka27A');
+      const audio26 = document.querySelector('#audio_bubuka26');
+      const audio25 = document.querySelector('#audio_gerakopening');
+      const audio24 = document.querySelector('#audio_ikat');
+      const audio22 = document.querySelector('#audio_desain');
+      const audio21 = document.querySelector('#audio_halaman21');
+      const audio20 = document.querySelector('#audio_halaman20');
+      const audio17 = document.querySelector('#audio_halaman17');
+      const audio10 = document.querySelector('#audio_halaman10');
+      const audio9B = document.querySelector('#audio_halaman9B');
+      const audio9A = document.querySelector('#audio_halaman9A');
+      const audio12 = document.querySelector('#audio_halaman12');
+      const audio13 = document.querySelector('#audio_halaman13');
+      const video6 = document.querySelector('#videoModel6');
+      const audio6 = document.querySelector('#audio_halaman6');
+      const video5 = document.querySelector('#videoModel5');
+      const video48 = document.querySelector('#seruModel48');
+      const audio50 = document.querySelector('#audio_alok');
+      const audio49 = document.querySelector('#audio_sinden');
+      const audio1 = document.querySelector('#audio_opening1');
+      const audio4A = document.querySelector('#audio_halaman4A');
+      const audio4B = document.querySelector('#audio_halaman4B');
+      const audio7 = document.querySelector('#audio_halaman7');
+      const video42C = document.querySelector('#KARAWANGModel42C');
+      const audio23 = document.querySelector('#audio_atribut');
+      const audio18 = document.querySelector('#audio_halaman18');
+      const audio3 = document.querySelector('#audio_halaman3');
+      const video14 = document.querySelector('#videoModel14');
+      const audio16 = document.querySelector('#audio_lengser');
+
+      // Unmute & Unlock Audio/Video secara otomatis pada sentuhan/klik pertama di layar
+      const unlockMediaOnFirstTouch = () => {
+        // Unlock Audio
+        [audio19, audio2, audio15, audio11, audio11, audio54, audio52, audio51, audio46, audio45, audio39, audio40, audio37, audio38, audio35, audio34, audio33, audio31, audio28, audio29, audio27B, audio27A, audio26, audio25, audio24, audio22, audio21, audio20, audio17, audio10, audio9B, audio9A, audio12, audio13, audio6, audio50, audio49, audio1, audio4A, audio4B, audio7, audio23, audio18, audio3, audio16].forEach(audio => {
+          if (audio) {
+            audio.play().then(() => {
+              audio.pause();
+              audio.currentTime = 0;
+            }).catch(() => {});
+          }
+        });
+
+        // Unlock Video Target 4, Target 10, Target 11, Target 12, & Target 13
+        [video8, video43C, video43B, video43A, video42B, video43C, video43B, video43A, video42B, video42A, video6, video48, video42C, video14].forEach(video => {
+          if (video) {
+            video.muted = false;
+            video.play().then(() => {
+              video.pause();
+              video.currentTime = 0;
+            }).catch(() => {});
+          }
+        });
+
+        window.removeEventListener('touchstart', unlockMediaOnFirstTouch);
+        window.removeEventListener('click', unlockMediaOnFirstTouch);
+      };
+
+      window.addEventListener('touchstart', unlockMediaOnFirstTouch, { once: true });
+      window.addEventListener('click', unlockMediaOnFirstTouch, { once: true });
+
+      // Helper Listener Audio
+      function setupAudioTarget(targetEl, audioEl) {
+        if (!targetEl || !audioEl) return;
+
+        targetEl.addEventListener("targetFound", () => {
+          audioEl.play().catch(e => console.log("Autoplay audio terhalang: ", e));
+        });
+
+        targetEl.addEventListener("targetLost", () => {
+          audioEl.pause();
+          audioEl.currentTime = 0;
+        });
+      }
+
+      // Helper Listener Video
+      function setupVideoTarget(targetEl, videoEl) {
+        if (!targetEl || !videoEl) return;
+
+        targetEl.addEventListener("targetFound", () => {
+          videoEl.play().catch(e => {
+            console.log("Autoplay video terhalang, mencoba memutar tanpa suara...", e);
+            videoEl.muted = true; // Fallback jika browser tetap memblokir audio video
+            videoEl.play();
+          });
+        });
+
+        targetEl.addEventListener("targetLost", () => {
+          videoEl.pause();
+          videoEl.currentTime = 0;
+        });
+      }
+
+      // Pasang Listener Audio untuk Target 0-3, 5-9
+      setupAudioTarget(target0, audio19);
+      setupAudioTarget(target1, audio2);
+      setupAudioTarget(target2, audio15);
+      setupAudioTarget(target3, audio11);
+      setupAudioTarget(target5, audio54);
+      setupAudioTarget(target6, audio52); 
+      setupAudioTarget(target7, audio51);
+      setupAudioTarget(target8, audio46); 
+      setupAudioTarget(target9, audio45); 
+      setupAudioTarget(target15, audio39); 
+      setupAudioTarget(target16, audio40); 
+      setupAudioTarget(target17, audio37); 
+      setupAudioTarget(target18, audio38);
+      setupAudioTarget(target19, audio35);
+      setupAudioTarget(target20, audio34);
+      setupAudioTarget(target21, audio33);
+      setupAudioTarget(target22, audio31);
+      setupAudioTarget(target23, audio28);
+      setupAudioTarget(target24, audio29);
+      setupAudioTarget(target25, audio27B);
+      setupAudioTarget(target26, audio27A);
+      setupAudioTarget(target27, audio26);
+      setupAudioTarget(target28, audio25);
+      setupAudioTarget(target29, audio24);
+      setupAudioTarget(target30, audio22);
+      setupAudioTarget(target31, audio21);
+      setupAudioTarget(target32, audio20);
+      setupAudioTarget(target33, audio17);
+      setupAudioTarget(target34, audio10);
+      setupAudioTarget(target35, audio9B);
+      setupAudioTarget(target36, audio9A);
+      setupAudioTarget(target37, audio12);
+      setupAudioTarget(target38, audio13);
+      setupAudioTarget(target39, audio6);
+      setupAudioTarget(target42, audio50);
+      setupAudioTarget(target43, audio49);
+      setupAudioTarget(target44, audio1);
+      setupAudioTarget(target45, audio4A);
+      setupAudioTarget(target46, audio4B);
+      setupAudioTarget(target47, audio7);
+      setupAudioTarget(target49, audio23);
+      setupAudioTarget(target50, audio18);
+      setupAudioTarget(target51, audio3);
+      setupAudioTarget(target53, audio16);
+
+      // Pasang Listener Video untuk Target 4, 10, 11, 12, dan 13
+      setupVideoTarget(target4, video8);
+      setupVideoTarget(target10, video43C);
+      setupVideoTarget(target11, video43B);
+      setupVideoTarget(target12, video43A);
+      setupVideoTarget(target13, video42B);
+      setupVideoTarget(target14, video42A);
+      setupVideoTarget(target39, video6);
+      setupVideoTarget(target40, video5);
+      setupVideoTarget(target41, video48);
+      setupVideoTarget(target48, video42C);
+      setupVideoTarget(target52, video14);
+    });
+  </script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+<a-scene 
+  mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" filterMinCF: 0.0001; filterBeta: 0.001; missTolerance: 12;>
+
+  <a-assets>
+    <!-- Target 0: Halaman 19 -->
+    <a-asset-item id="aaModel" src="./halaman 19/aa nyengir.glb"></a-asset-item>
+    <a-asset-item id="patungModel19" src="./halaman 19/patung_singa.glb"></a-asset-item>
+    <audio id="audio_halaman19" src="./halaman 19/halaman 19 audio.mp3" preload="auto"></audio>
+  
+    <!-- Target 1: Halaman 2 -->
+    <a-asset-item id="patungModel2" src="./halaman 2/patung_singa.glb"></a-asset-item>
+    <img id="ogohModel" src="./halaman 2/ogoh ogoh.jfif"></img>
+    <img id="singaModel" src="./halaman 2/singa depok.jfif"></img>
+    <img id="sisingaanModel" src="./halaman 2/sisingaan.jfif"></img>
+    <audio id="audio_halaman2" src="./halaman 2/halaman 2 audio.mp3" preload="auto"></audio>
+    
+    <!-- Target 2: Halaman 15 -->
+    <a-asset-item id="ogohModel15" src="./halaman 15/ogoh-ogoh.glb"></a-asset-item>
+    <audio id="audio_halaman15" src="./halaman 15/halaman 15 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 3: Halaman 11 -->
+    <a-asset-item id="patungModel11" src="./halaman 11/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="unoModel11" src="./halaman 11/uno duduk.glb"></a-asset-item>
+    <a-asset-item id="pengusungModel11" src="./halaman 11/pengusung halaman 10.glb"></a-asset-item>
+    <audio id="audio_halaman11" src="./halaman 11/halaman 11 audio.mp3" preload="auto"></audio>
+ 
+    <!-- Target 4: Halaman 8 -->
+    <video id="videoModel8" src="./halaman 8/video halaman 8.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 5: Halaman 54 -->
+    <a-asset-item id="patungModel54" src="./halaman 54/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="pemikulModel54" src="./halaman 54/pemikul halaman 4.glb"></a-asset-item>
+    <a-asset-item id="horegModel54" src="./halaman 54/horeg.glb"></a-asset-item>
+    <audio id="audio_filosofi" src="./halaman 54/filosofi audio.mp3" preload="auto"></audio>
+  
+    <!-- Target 6: Halaman 52 -->
+    <a-asset-item id="mobilModel52" src="./halaman 52/mobil.glb"></a-asset-item>
+    <audio id="audio_kol" src="./halaman 52/kol mobil audio.mp3" preload="auto"></audio>  
+
+    <!-- Target 7: Halaman 51 -->
+    <a-asset-item id="horegModel51" src="./halaman 51/horeg.glb"></a-asset-item>
+    <audio id="audio_horeg" src="./halaman 51/horeg audio.mp3" preload="auto"></audio>  
+  
+    <!-- Target 8: Halaman 46 -->
+    <a-asset-item id="bonangModel46" src="./halaman 46/bonang.glb"></a-asset-item>
+    <a-asset-item id="dogModel46" src="./halaman 46/dog dog.glb"></a-asset-item>
+    <a-asset-item id="GoongModel46" src="./halaman 46/Goong.glb"></a-asset-item>
+    <a-asset-item id="kecrekModel46" src="./halaman 46/kecrek.glb"></a-asset-item>
+    <a-asset-item id="kempulModel46" src="./halaman 46/kempul.glb"></a-asset-item>
+    <a-asset-item id="kendangModel46" src="./halaman 46/kendang.glb"></a-asset-item>
+    <a-asset-item id="sulingModel46" src="./halaman 46/suling.glb"></a-asset-item>
+    <a-asset-item id="tarompetModel46" src="./halaman 46/tarompet.glb"></a-asset-item>
+    <audio id="audio_kumpulan" src="./halaman 46/kumpulan alat audio.mp3" preload="auto"></audio>
+  
+    <!-- Target 9: Halaman 45 -->
+    <a-asset-item id="alatModel45" src="./halaman 45/alat musik.glb"></a-asset-item>
+    <audio id="audio_alat" src="./halaman 45/alat musik audio.mp3" preload="auto"></audio>  
+  
+    <!-- Target 10: Halaman 43C -->
+    <video id="PenariMode43C" src="./halaman 43C/Penari kreasi.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 11: Halaman 43B -->
+    <video id="TariMode43B" src="./halaman 43B/Tari gaplek.mp4" loop playsinline crossorigin="anonymous"></video>
+ 
+    <!-- Target 12: Halaman 43A -->
+    <video id="HiburanMode43A" src="./halaman 43A/Hiburan Rakyat.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 13: Halaman 42B -->
+    <video id="KETUKMode42B" src="./halaman 42B/KETUK TILU.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 14: Halaman 42A -->
+    <video id="IbingMode42A" src="./halaman 42A/Ibing SILAT.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 15: Halaman 39 -->
+    <a-asset-item id="tepakModel39" src="./halaman 39/tepak 2.glb"></a-asset-item>
+    <audio id="audio_tepak" src="./halaman 39/tepak 2 audio.mp3" preload="auto"></audio>  
+
+    <!-- Target 16: Halaman 40 -->
+    <a-asset-item id="patungModel40" src="./halaman 40/patung singa 34.glb"></a-asset-item>
+    <a-asset-item id="tepakModel40" src="./halaman 40/tepak 3.glb"></a-asset-item>
+    <audio id="audio_tepak3" src="./halaman 40/tepak3 audio.mp3" preload="auto"></audio>  
+    
+    <!-- Target 17: Halaman 37 -->
+    <a-asset-item id="mincidModel37" src="./halaman 37/mincid tandu.glb"></a-asset-item>
+    <audio id="audio_mincid" src="./halaman 37/mincid audio.mp3" preload="auto"></audio> 
+
+    <!-- Target 18: Halaman 38 -->
+    <a-asset-item id="patungModel38" src="./halaman 38/patung singa 34.glb"></a-asset-item>
+    <a-asset-item id="jalanModel38" src="./halaman 38/jalan mincid.glb"></a-asset-item>
+    <audio id="audio_jalan" src="./halaman 38/jalan audio.mp3" preload="auto"></audio>
+
+    <!-- Target 19: Halaman 35 -->
+    <a-asset-item id="patungModel35" src="./halaman 35/patung singa 34.glb"></a-asset-item>
+    <a-asset-item id="bungkukModel35" src="./halaman 35/bungkuk.glb"></a-asset-item>
+    <audio id="audio_ewag" src="./halaman 35/ewag audio.mp3" preload="auto"></audio>
+
+    <!-- Target 20: Halaman 34 -->
+    <a-asset-item id="patungModel34" src="./halaman 34/patung singa 34.glb"></a-asset-item>
+    <a-asset-item id="pemikulModel34" src="./halaman 34/pemikul halaman 34.glb"></a-asset-item>
+    <audio id="audio_galura" src="./halaman 34/galura 34 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 21: Halaman 33 -->
+    <a-asset-item id="patungModel33" src="./halaman 33/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="lutut1Model33" src="./halaman 33/lutut1.glb"></a-asset-item>
+    <audio id="audio_ngedeprak" src="./halaman 33/ngedeprak 33 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 22: Halaman 31 -->
+    <img id="pertanyaanModel31" src="./halaman 31/pertanyaan.png"></img>
+    <img id="khitananModel31" src="./halaman 31/khitanan.png"></img>
+    <img id="penyambutanModel31" src="./halaman 31/penyambutan.png"></img>
+    <img id="pernikahanModel31" src="./halaman 31/pernikahan.png"></img>
+    <audio id="audio_penutup" src="./halaman 31/penutup 31 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 23: Halaman 28 -->
+    <a-asset-item id="angkatModel28" src="./halaman 28/angkat sisingaan.glb"></a-asset-item>
+    <audio id="audio_bubuka28" src="./halaman 28/bubuka28 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 24: Halaman 29 -->
+    <a-asset-item id="atraksi1Model29" src="./halaman 29/atraksi1.glb"></a-asset-item>
+    <a-asset-item id="atraksi2Model29" src="./halaman 29/atraksi2.glb"></a-asset-item>
+    <a-asset-item id="berguling_loncatModel29" src="./halaman 29/berguling_loncat.glb"></a-asset-item>
+    <a-asset-item id="bergulingModel29" src="./halaman 29/berguling.glb"></a-asset-item>
+    <a-asset-item id="slidingModel29" src="./halaman 29/sliding depan.glb"></a-asset-item>
+    <audio id="audio_atraksi" src="./halaman 29/atraksi 29 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 25: Halaman 27B -->
+    <a-asset-item id="patungModel27B" src="./halaman 27B/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="mengangkatModel27B" src="./halaman 27B/mengangkat.glb"></a-asset-item>
+    <audio id="audio_bubuka27B" src="./halaman 27B/bubuka27b audio.mp3" preload="auto"></audio>
+
+    <!-- Target 26: Halaman 27A -->
+    <a-asset-item id="patungModel27A" src="./halaman 27A/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="salamModel27A" src="./halaman 27A/salam.glb"></a-asset-item>
+    <audio id="audio_bubuka27A" src="./halaman 27A/bubuka27a audio.mp3" preload="auto"></audio>
+
+    <!-- Target 27: Halaman 26 -->
+    <a-asset-item id="ceweModel26" src="./halaman 26/cewe berdua.glb"></a-asset-item>
+    <a-asset-item id="bertigaModel26" src="./halaman 26/orang bertiga.glb"></a-asset-item>
+    <a-asset-item id="setModel26" src="./halaman 26/set sisingaan.glb"></a-asset-item>
+    <audio id="audio_bubuka26" src="./halaman 26/bubuka 26 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 28: Halaman 25 -->
+    <a-asset-item id="pengusungModel25" src="./halaman 25/pengusung halaman 12.glb"></a-asset-item>
+    <a-asset-item id="ragamgerak2Model25" src="./halaman 25/ragam gerak 2.glb"></a-asset-item>
+    <a-asset-item id="ragamgerakModel25" src="./halaman 25/ragam gerak.glb"></a-asset-item>
+    <a-asset-item id="ragamgerak4Model25" src="./halaman 25/ragam gerak 4.glb"></a-asset-item>
+    <audio id="audio_gerakopening" src="./halaman 25/gerakan opening 25 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 29: Halaman 24 -->
+    <a-asset-item id="ikatModel24" src="./halaman 24/ikat kepala.glb"></a-asset-item>
+    <a-asset-item id="kaosModel24" src="./halaman 24/kaos kaki bagus.glb"></a-asset-item>
+    <a-asset-item id="sabukModel24" src="./halaman 24/sabuk.glb"></a-asset-item>
+    <a-asset-item id="sepatuModel24" src="./halaman 24/sepatu.glb"></a-asset-item>
+    <audio id="audio_ikat" src="./halaman 24/ikat 24 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 30: Halaman 22 -->
+    <a-asset-item id="peragabusana3Model22" src="./halaman 22/peraga busana 3.glb"></a-asset-item>
+    <audio id="audio_desain" src="./halaman 22/desain kostum.mp3" preload="auto"></audio>
+
+    <!-- Target 31: Halaman 21 -->
+    <a-asset-item id="bajuhalaman21Model21" src="./halaman 21/baju halaman 21.glb"></a-asset-item>
+    <audio id="audio_halaman21" src="./halaman 21/halaman 21 audio.mp3" preload="auto"></audio>
+
+   <!-- Target 32: Halaman 20 -->
+    <a-asset-item id="bajuseragamModel20" src="./halaman 20/baju seragam.glb"></a-asset-item>
+    <audio id="audio_halaman20" src="./halaman 20/halaman20 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 33: Halaman 17 -->
+    <a-asset-item id="peragabusana1Model17" src="./halaman 17/peraga busana 1.glb"></a-asset-item>
+    <a-asset-item id="peragabusana2Model17" src="./halaman 17/peraga busana 2.glb"></a-asset-item>
+    <a-asset-item id="peragabusana3Model17" src="./halaman 17/peraga busana 3.glb"></a-asset-item>
+    <a-asset-item id="peragabusana4Model17" src="./halaman 17/peraga busana 4.glb"></a-asset-item>
+    <audio id="audio_halaman17" src="./halaman 17/halaman17 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 34: Halaman 10 -->
+    <a-asset-item id="patungModel10" src="./halaman 10/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="unoModel10" src="./halaman 10/uno duduk.glb"></a-asset-item>
+    <a-asset-item id="ceweModel10" src="./halaman 10/cewe berdua.glb"></a-asset-item>
+    <a-asset-item id="orangModel10" src="./halaman 10/orang bertiga.glb"></a-asset-item>
+    <a-asset-item id="pengusungModel10" src="./halaman 10/pengusung halaman 10.glb"></a-asset-item>
+    <audio id="audio_halaman10" src="./halaman 10/halaman10 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 35: Halaman 9B -->
+    <a-asset-item id="lantaiModel9B" src="./halaman 9B/lantai.glb"></a-asset-item>
+    <a-asset-item id="bahnanuModel9B" src="./halaman 9B/bah nanu.glb"></a-asset-item>
+    <audio id="audio_halaman9B" src="./halaman 9B/halaman9B audio.mp3" preload="auto"></audio>
+
+    <!-- Target 36: Halaman 9A -->
+    <a-asset-item id="lantaiModel9A" src="./halaman 9A/lantai.glb"></a-asset-item>
+    <a-asset-item id="bahukatModel9A" src="./halaman 9A/bah Ukat.glb"></a-asset-item>
+    <audio id="audio_halaman9A" src="./halaman 9A/halaman9A audio.mp3" preload="auto"></audio>
+
+    <!-- Target 37: Halaman 12 -->
+    <a-asset-item id="komponenModel12" src="./halaman 12/komponen.glb"></a-asset-item>
+    <a-asset-item id="pengusungModel12" src="./halaman 12/pengusung halaman 12.glb"></a-asset-item>
+    <audio id="audio_halaman12" src="./halaman 12/halaman12 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 38: Halaman 13 -->
+    <a-asset-item id="singaModel13" src="./halaman 13/singa jalan.glb"></a-asset-item>
+    <audio id="audio_halaman13" src="./halaman 13/halaman13 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 39: Halaman 6 -->
+    <a-asset-item id="hoflandModel6" src="./halaman 6/hofland berdiri.glb"></a-asset-item>
+    <audio id="audio_halaman6" src="./halaman 6/halaman6 audio.mp3" preload="auto"></audio>
+    <video id="videoModel6" src="./halaman 6/video hofland.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 40: Halaman 5 -->
+    <video id="videoModel5" src="./halaman 5/video halaman 5.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 41: Halaman 48 -->
+    <video id="seruModel48" src="./halaman 48/seru nayaga.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 42: Halaman 50 -->
+    <a-asset-item id="alokModel50" src="./halaman 50/alok.glb"></a-asset-item>
+    <audio id="audio_alok" src="./halaman 50/alok audio.mp3" preload="auto"></audio>
+
+    <!-- Target 43: Halaman 49 -->
+    <a-asset-item id="sindenModel49" src="./halaman 49/sinden.glb"></a-asset-item>
+    <audio id="audio_sinden" src="./halaman 49/sinden.mp3" preload="auto"></audio>
+
+    <!-- Target 44: Halaman 1 -->
+    <a-asset-item id="halaman1Model1" src="./halaman 1/halaman1.glb"></a-asset-item>
+    <audio id="audio_opening1" src="./halaman 1/opening1 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 45: Halaman 4A -->
+    <a-asset-item id="anakModel4A" src="./halaman 4A/anak di atas sisingaan.glb"></a-asset-item>
+    <a-asset-item id="patungModel4A" src="./halaman 4A/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="pemikulModel4A" src="./halaman 4A/pemikul halaman 4.glb"></a-asset-item>
+    <audio id="audio_halaman4A" src="./halaman 4A/halaman4A audio.mp3" preload="auto"></audio>
+
+    <!-- Target 46: Halaman 4B -->
+    <a-asset-item id="penjajahModel4B" src="./halaman 4B/penjajah.glb"></a-asset-item>
+    <a-asset-item id="pribumiModel4B" src="./halaman 4B/pribumi.glb"></a-asset-item>
+    <audio id="audio_halaman4B" src="./halaman 4B/halaman4B audio.mp3" preload="auto"></audio>
+
+    <!-- Target 47: Halaman 4B -->
+    <a-asset-item id="hoflanModel7" src="./halaman 7/hoflan sisingaan.glb"></a-asset-item>
+    <a-asset-item id="patungModel7" src="./halaman 7/patung_singa.glb"></a-asset-item>
+    <a-asset-item id="pemikulModel7" src="./halaman 7/pemikul halaman 7.glb"></a-asset-item>
+    <audio id="audio_halaman7" src="./halaman 7/halaman7 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 48: Halaman 42C -->
+    <video id="#KARAWANGModel42C" src="./halaman 42C/KARAWANG TANDANG.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 49: Halaman 23 -->
+    <img id="atributModel23" src="./halaman 23/atribut baju.jpg"></img>
+    <a-asset-item id="lantaiModel23" src="./halaman 23/lantai.glb"></a-asset-item>
+    <a-asset-item id="peragaModel23" src="./halaman 23/peraga busana 2.glb"></a-asset-item>
+    <audio id="audio_atribut" src="./halaman 23/atribut.mp3" preload="auto"></audio>
+
+    <!-- Target 50: Halaman 18 -->
+    <a-asset-item id="penunggangModel18" src="./halaman 18/penunggang singa.glb"></a-asset-item>
+    <audio id="audio_halaman18" src="./halaman 18/halaman18 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 51: Halaman 3 -->
+    <a-asset-item id="anakModel3" src="./halaman 3/anak sunat halaman 3.glb"></a-asset-item>
+    <a-asset-item id="kursiModel3" src="./halaman 3/kursi sunat.glb"></a-asset-item>
+    <audio id="audio_halaman3" src="./halaman 3/halaman3 audio.mp3" preload="auto"></audio>
+
+    <!-- Target 52: Halaman 14 -->
+    <video id="videoModel14" src="./halaman 14/video halaman 14.mp4" loop playsinline crossorigin="anonymous"></video>
+
+    <!-- Target 53: Halaman 16 -->
+    <a-asset-item id="aki_jalanModel16" src="./halaman 16/aki_jalan.glb.glb"></a-asset-item>
+    <a-asset-item id="nini_jalanModel16" src="./halaman 16/nini_jalan.glb.glb"></a-asset-item>
+    <audio id="audio_lengser" src="./halaman 16/lengser.mp3" preload="auto"></audio>
+
+  </a-assets>
+
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+  <!-- TARGET 0 (Halaman 19) -->
+  <a-entity id="target0" mindar-image-target="targetIndex: 0">
+    <a-gltf-model src="#aaModel" position="0.2 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#patungModel19" position="-0.2 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 1 (Halaman 2) -->
+  <a-entity id="target1" mindar-image-target="targetIndex: 1">
+    <a-gltf-model src="#patungModel2" position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0" animation-mixer animation="property: rotation; to: 0 360 0; dur: 6000; easing: linear; loop: true"></a-gltf-model>
+    <a-image src="#ogohModel" position="0 0.3 0.3" scale="0.3 0.3 0.3" rotation="90 0 0"></a-image>
+    <a-image src="#singaModel" position="0.3 0.3 0" scale="0.3 0.3 0.3" rotation="90 0 0"></a-image>
+    <a-image src="#sisingaanModel" position="-0.3 0.3 0" scale="0.3 0.3 0.3" rotation="90 0 0"></a-image>
+  </a-entity>
+
+  <!-- TARGET 2 (Halaman 15) -->
+  <a-entity id="target2" mindar-image-target="targetIndex: 2">
+    <a-gltf-model src="#ogohModel15" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0" animation-mixer animation="property: rotation; to: 0 360 0; dur: 6000; easing: linear; loop: true"></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 3 (Halaman 11) -->
+  <a-entity id="target3" mindar-image-target="targetIndex: 3">
+    <a-gltf-model src="#patungModel11" position="0 0 0.9" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#unoModel11" position="0.1 -0.1 0.6" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pengusungModel11" position="-0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pengusungModel11" position="0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pengusungModel11" position="-0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pengusungModel11" position="0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 4 (Halaman 8) -->
+  <a-entity id="target4" mindar-image-target="targetIndex: 4">
+    <a-plane src="#videoModel8" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 5 (Halaman 54) -->
+  <a-entity id="target5" mindar-image-target="targetIndex: 5">
+    <a-gltf-model src="#patungModel54" position="-0.05 0 0.9" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#horegModel54" position="0 0 0.5" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel54" position="-0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel54" position="0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel54" position="-0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel54" position="0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 6 (Halaman 52) -->
+  <a-entity id="target6" mindar-image-target="targetIndex: 6">
+    <a-gltf-model src="#mobilModel52" position="5 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: -1.5 0 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 7 (Halaman 51) -->
+  <a-entity id="target7" mindar-image-target="targetIndex: 7">
+    <a-gltf-model src="#horegModel51" position="0.3 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o 0.4 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 8 (Halaman 46) -->
+  <a-entity id="target8" mindar-image-target="targetIndex: 8">
+    <a-gltf-model src="#bonangModel46" position="-0.6 -0.4 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#dogModel46" position="0.6 -0.4 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#GoongModel46" position="0 0.4 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#kecrekModel46" position="0 -0.4 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#kempulModel46" position="0.6 0.4 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#kendangModel46" position="-0.6 0.4 0" scale="0.22 0.22 0.22" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#kendangModel46" position="-0.6 0 0" scale="0.15 0.15 0.15" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#sulingModel46" position="0.6 0 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#tarompetModel46" position="0 0 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 9 (Halaman 45) -->
+  <a-entity id="target9" mindar-image-target="targetIndex: 9">
+    <a-gltf-model src="#alatModel45" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 10 (Halaman 43C) -->
+  <a-entity id="target10" mindar-image-target="targetIndex: 10">
+    <a-plane src="#PenariMode43C" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 11 (Halaman 43B) -->
+  <a-entity id="target11" mindar-image-target="targetIndex: 11">
+    <a-plane src="#TariMode43B" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 12 (Halaman 43A) -->
+  <a-entity id="target12" mindar-image-target="targetIndex: 12">
+    <a-plane src="#HiburanMode43A" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 13 (Halaman 42B) -->
+  <a-entity id="target13" mindar-image-target="targetIndex: 13">
+    <a-plane src="#KETUKMode42B" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 14 (Halaman 42A) -->
+  <a-entity id="target14" mindar-image-target="targetIndex: 14">
+    <a-plane src="#IbingMode42A" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 15 (Halaman 39) -->
+  <a-entity id="target15" mindar-image-target="targetIndex: 15">
+    <a-gltf-model src="#tepakModel39" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 16 (Halaman 40) -->
+  <a-entity id="target16" mindar-image-target="targetIndex: 16">
+    <a-gltf-model src="#patungModel40" position="0 0 0.55" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#tepakModel40" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#tepakModel40" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#tepakModel40" position="-0.3 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#tepakModel40" position="0.26 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 17 (Halaman 37) -->
+  <a-entity id="target17" mindar-image-target="targetIndex: 17">
+    <a-gltf-model src="#mincidModel37" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 18 (Halaman 38) -->
+  <a-entity id="target18" mindar-image-target="targetIndex: 18">
+    <a-gltf-model src="#patungModel38" position="-0.1 -0.2 0.8" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#jalanModel38" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#jalanModel38" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#jalanModel38" position="-0.3 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#jalanModel38" position="0.26 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 19 (Halaman 35) -->
+  <a-entity id="target19" mindar-image-target="targetIndex: 19">
+    <a-gltf-model src="#patungModel35" position="-0.1 -0.2 0.8" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation="property: position; to: -0.1 -2 0.8; dur: 1700; easing: linear"></a-gltf-model>
+    <a-gltf-model src="#bungkukModel35" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#bungkukModel35" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#bungkukModel35" position="-0.3 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#bungkukModel35" position="0.26 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 20 (Halaman 34) -->
+  <a-entity id="target20" mindar-image-target="targetIndex: 20">
+    <a-gltf-model src="#patungModel34" position="-0.1 -0.08 0.9" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel34" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel34" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel34" position="-0.3 0.2 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#pemikulModel34" position="0.26 0.2 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 21 (Halaman 33) -->
+  <a-entity id="target21" mindar-image-target="targetIndex: 21">
+    <a-gltf-model src="#patungModel34" position="-0.05 -0.1 0.7" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#lutut1Model33" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#lutut1Model33" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#lutut1Model33" position="-0.3 0.2 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#lutut1Model33" position="0.26 0.2 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 22 (Halaman 31) -->
+  <a-entity id="target22" mindar-image-target="targetIndex: 22">
+    <a-image src="#pertanyaanModel31" position="0 0.8 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-image>
+    <a-image src="#khitananModel31" position="0 0.3 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-image>
+    <a-image src="#penyambutanModel31" position="0.6 0.3 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-image>
+    <a-image src="#pernikahanModel31" position="-0.6 0.3 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-image>
+  </a-entity>
+
+  <!-- TARGET 23 (Halaman 28) -->
+  <a-entity id="target23" mindar-image-target="targetIndex: 23">
+    <a-gltf-model src="#angkatModel28" position="0 0 0" scale="1 1 1" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 24 (Halaman 29) -->
+  <a-entity id="target24" mindar-image-target="targetIndex: 24">
+    <a-gltf-model src="#atraksi1Model29" position="0 0 0" scale="0.6 0.6 0.6" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#atraksi2Model29" position="0.1 -0.2 0.7" scale="0.27 0.27 0.27" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#berguling_loncatModel29" position="0.3 -0.5 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#bergulingModel29" position="-0.3 -0.5 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#slidingModel29" position="0 -0.5 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 25 (Halaman 27B) -->
+  <a-entity id="target25" mindar-image-target="targetIndex: 25">
+    <a-gltf-model src="#patungModel27B" position="-0.1 -0.5 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation="property: position; to: 0 0 0.3; dur: 3300; easing: linear"></a-gltf-model>
+    <a-gltf-model src="#mengangkatModel27B" position="-0.3 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#mengangkatModel27B" position="0.26 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#mengangkatModel27B" position="-0.3 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#mengangkatModel27B" position="0.26 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 26 (Halaman 27A) -->
+  <a-entity id="target26" mindar-image-target="targetIndex: 26">
+    <a-gltf-model src="#patungModel27A" position="-0.1 -0.2 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#salamModel27A" position="-0.5 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#salamModel27A" position="0.5 -0.44 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#salamModel27A" position="-0.3 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#salamModel27A" position="0.26 0.18 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 27 (Halaman 26) -->
+  <a-entity id="target27" mindar-image-target="targetIndex: 27">
+    <a-gltf-model src="#ceweModel26" position="-0.5 0.7 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#bertigaModel26" position="0.1 0.7 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#setModel26" position="0 0 0" scale="8 8 8" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 28 (Halaman 25) -->
+  <a-entity id="target28" mindar-image-target="targetIndex: 28">
+    <a-gltf-model src="#pengusungModel25" position="-0.6 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#ragamgerak2Model25" position="-0.2 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#ragamgerakModel25" position="0.2 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#ragamgerak4Model25" position="0.6 0 0.5" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 29 (Halaman 24) -->
+  <a-entity id="target29" mindar-image-target="targetIndex: 29">
+    <a-gltf-model src="#ikatModel24" position="-0.3 0.3 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#kaosModel24" position="-0.3 -0.3 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#kaosModel24" position="-0.3 -0.4 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#sabukModel24" position="0.3 0.3 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#sepatuModel24" position="0.3 -0.3 0" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 30 (Halaman 22) -->
+  <a-entity id="target30" mindar-image-target="targetIndex: 30">
+    <a-gltf-model src="#peragabusana3Model22" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 31 (Halaman 21) -->
+  <a-entity id="target31" mindar-image-target="targetIndex: 31">
+    <a-gltf-model src="#bajuhalaman21Model21" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 32 (Halaman 20) -->
+  <a-entity id="target32" mindar-image-target="targetIndex: 32">
+    <a-gltf-model src="#bajuseragamModel20" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 33 (Halaman 17) -->
+  <a-entity id="target33" mindar-image-target="targetIndex: 33">
+    <a-gltf-model src="#peragabusana1Model17" position="-0.6 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#peragabusana2Model17" position="-0.2 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#peragabusana3Model17" position="0.2 0 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#peragabusana4Model17" position="0.45 -0.2 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 34 (Halaman 10) -->
+  <a-entity id="target34" mindar-image-target="targetIndex: 34">
+    <a-gltf-model src="#patungModel10" position="0 0 0.9" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+    <a-gltf-model src="#unoModel10" position="0.1 -0.1 0.6" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+    <a-gltf-model src="#pengusungModel10" position="-0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+    <a-gltf-model src="#pengusungModel10" position="0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+    <a-gltf-model src="#pengusungModel10" position="-0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+    <a-gltf-model src="#pengusungModel10" position="0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation="property: position; to: o -0.5 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+  <a-entity id="target34" mindar-image-target="targetIndex: 34" position="0.5 1 0" rotation="0 90 0">
+    <a-gltf-model src="#ceweModel10" position="-0.7 -0.5 0" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer></a-gltf-model>
+    <a-gltf-model src="#orangModel10" position="0.7 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 35 (Halaman 9B) -->
+  <a-entity id="target35" mindar-image-target="targetIndex: 35">
+    <a-gltf-model src="#lantaiModel9B" position="0 0 -0.5" scale="0.2 0.2 0.2" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#bahnanuModel9B" position="0 0 0.1" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 36 (Halaman 9A) -->
+  <a-entity id="target36" mindar-image-target="targetIndex: 36">
+    <a-gltf-model src="#lantaiModel9A" position="0 0 -0.5" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#bahukatModel9A" position="0 0 0.3" scale="0.8 0.8 0.8" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 37 (Halaman 12) -->
+  <a-entity id="target37" mindar-image-target="targetIndex: 37">
+    <a-gltf-model src="#komponenModel12" position="-0.2 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pengusungModel12" position="0.3 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 38 (Halaman 13) -->
+  <a-entity id="target38" mindar-image-target="targetIndex: 38">
+    <a-gltf-model src="#singaModel13" position="0 0 0" scale="0.8 0.8 0.8" rotation="90 0 0" animation-mixer animation="property: position; to: -1.5 0 0; dur: 4500; easing: linear; loop: true"></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 39 (Halaman 6) -->
+  <a-entity id="target39" mindar-image-target="targetIndex: 39">
+    <a-gltf-model src="#hoflandModel6" position="0.3 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-plane src="#videoModel6" position="-0.4 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 40 (Halaman 5) -->
+  <a-entity id="target40" mindar-image-target="targetIndex: 40">
+    <a-plane src="#videoModel5" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 41 (Halaman 48) -->
+  <a-entity id="target41" mindar-image-target="targetIndex: 41">
+    <a-plane src="#seruModel48" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 42 (Halaman 50) -->
+  <a-entity id="target42" mindar-image-target="targetIndex: 42">
+    <a-gltf-model src="#alokModel50" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 43 (Halaman 49) -->
+  <a-entity id="target43" mindar-image-target="targetIndex: 43">
+    <a-gltf-model src="#sindenModel49" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 44 (Halaman 1) -->
+  <a-entity id="target44" mindar-image-target="targetIndex: 44">
+    <a-gltf-model src="#halaman1Model1" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 45 (Halaman 4A) -->
+  <a-entity id="target45" mindar-image-target="targetIndex: 45">
+    <a-gltf-model src="#anakModel4A" position="-0.07 0.15 0.7" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#patungModel4A" position="-0.07 0 0.9" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel4A" position="-0.3 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel4A" position="0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel4A" position="-0.3 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel4A" position="0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 46 (Halaman 4B) -->
+  <a-entity id="target46" mindar-image-target="targetIndex: 46">
+    <a-gltf-model src="#penjajahModel4B" position="-0.3 0 0" scale="0.8 0.8 0.8" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pribumiModel4B" position="0.3 0 0" scale="0.8 0.8 0.8" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 47 (Halaman 7) -->
+  <a-entity id="target47" mindar-image-target="targetIndex: 47">
+    <a-gltf-model src="#hoflanModel7" position="0 -0.1 0.7" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#patungModel7" position="0 0 0.8" scale="0.4 0.4 0.4" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel7" position="-0.3 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel7" position="0.25 -0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel7" position="-0.3 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#pemikulModel7" position="0.25 0.3 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 48 (Halaman 42C) -->
+  <a-entity id="target48" mindar-image-target="targetIndex: 48">
+    <a-plane src="#KARAWANGModel42C" position="0 0 0" rotation="0 0 0" width="1" height="1.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 49 (Halaman 23) -->
+  <a-entity id="target49" mindar-image-target="targetIndex: 49">
+    <a-image src="#atributModel23" position="0 0.2 0.1" rotation="90 0 0" width="1" height="1" material="shader: flat"></a-image>
+    <a-gltf-model src="#lantaiModel23" position="0 0 0" scale="0.3 0.3 0.3" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#peragaModel23" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 50 (Halaman 18) -->
+  <a-entity id="target50" mindar-image-target="targetIndex: 50">
+    <a-gltf-model src="#penunggangModel18" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 51 (Halaman 3) -->
+  <a-entity id="target51" mindar-image-target="targetIndex: 51">
+    <a-gltf-model src="#anakModel3" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#kursiModel3" position="0 0 0.2" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 52 (Halaman 14) -->
+  <a-entity id="target52" mindar-image-target="targetIndex: 52">
+    <a-plane src="#videoModel14" position="0 0 0" rotation="0 0 0" width="1" height="0.5" material="shader: flat"></a-plane>
+  </a-entity>
+
+  <!-- TARGET 53 (Halaman 16) -->
+  <a-entity id="target53" mindar-image-target="targetIndex: 53">
+    <a-gltf-model src="#aki_jalanModel16" position="-0.1 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+    <a-gltf-model src="#nini_jalanModel16" position="0.2 0 0" scale="0.5 0.5 0.5" rotation="90 0 0" animation-mixer animation></a-gltf-model>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>
